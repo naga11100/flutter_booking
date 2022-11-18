@@ -1,9 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_test/results.dart';
+import 'pages/results.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+import 'fireabase/firebase_options.dart';
 
 void main() async {
   //firestoreを使うのに必要
@@ -38,7 +37,7 @@ class Home extends StatelessWidget {
       resizeToAvoidBottomInset: false,
 
       appBar: AppBar(
-        title: const Text("ホテル予約"),
+        title: const Text("ホテル予約",style: TextStyle(color: Colors.grey),),
         backgroundColor: Colors.white,
       ),
 

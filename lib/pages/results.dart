@@ -15,9 +15,43 @@ class Results extends StatelessWidget {
         create: (_) => HotelList()..searchHotel(textValue),
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('ホテル検索結果'),
+            title: const Text('ホテル検索結果',style: TextStyle(color: Colors.grey),),
+            backgroundColor: Colors.white,
           ),
           body: Consumer<HotelList>(
+            child: Container(
+              width: 315.w,
+              height: 50.h,
+              margin: EdgeInsets.symmetric(vertical: 30.h),
+              decoration: BoxDecoration(
+                //影をつける
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color(0x11000000),
+                    blurRadius: 4,
+                    offset: Offset(0, 4),
+                  ),
+                ],
+              ),
+
+              child: TextField(
+                //キーボードの決定が押されたら検索
+                onSubmitted: (text)  {
+                  HotelList().searchHotel(text);
+                },
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide.none,
+                  ),
+                  filled: true,
+                  fillColor: Colors.white,
+                  prefixIcon: const Icon(Icons.search),
+                  hintText: 'ホテル名',
+                ),
+              ),
+            ),
             builder: (context, model, child) {
               // FirestoreのドキュメントのList booksを取り出す。
               final hotels = model.hotels;
