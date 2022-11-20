@@ -1,5 +1,7 @@
+<!--suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.firebase_test">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="firebase_test"
         android:name="${applicationName}"

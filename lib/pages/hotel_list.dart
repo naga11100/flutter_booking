@@ -15,6 +15,7 @@ class HotelList extends ChangeNotifier {
           .map((doc) => Hotel(doc))
           .toList();
       this.hotels = hotels;
+      print(hotels[0]);
       notifyListeners();
   }
 }

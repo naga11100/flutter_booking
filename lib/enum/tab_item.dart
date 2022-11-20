@@ -1,17 +1,17 @@
-import 'package:firebase_test/main.dart';
+import 'package:firebase_test/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_test/pages/mypage.dart';
 
 enum TabItem {
   home(
     title: 'ホーム',
-    icon: Icons.home,
-    page: MyApp(),
+    icon: Icons.home_outlined,
+    page: Home(),
   ),
 
   mypage(
     title: '設定',
-    icon: Icons.settings,
+    icon: Icons.perm_identity,
     page: MyPage(),
   );
 
