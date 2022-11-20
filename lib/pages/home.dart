@@ -25,6 +25,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
+        centerTitle: true,  // 中央寄せを設定
         title: const Text(
           "ホテル予約",
           style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
