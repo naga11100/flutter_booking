@@ -25,14 +25,12 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        centerTitle: true,  // 中央寄せを設定
+        centerTitle: true, // 中央寄せを設定
         title: const Text(
           "ホテル予約",
-          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         backgroundColor: const Color(0xff009688),
-
-
       ),
       body: SizedBox(
         width: 393.w,
@@ -94,6 +92,64 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
                 color: Colors.white,
+              ),
+              child: Column(
+                children: <Widget>[
+                  Container(
+                    width: 280.w,
+                    height: 50.h,
+                    margin: EdgeInsets.symmetric(vertical: 40.h),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x11000000),
+                          blurRadius: 10,
+                          offset: Offset(0, 5),
+                        ),
+                      ],
+                      color: Colors.white,
+                    ),
+                    child: const Text("場所を選択"),
+                  ),
+                  Container(
+                    width: 280.w,
+                    height: 110.h,
+                    margin: EdgeInsets.symmetric(vertical: 10.h),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x11000000),
+                          blurRadius: 10,
+                          offset: Offset(0, 5),
+                        ),
+                      ],
+                      color: Colors.white,
+                    ),
+                    child: const Text("日づけを指定"),
+                  ),
+                  Container(
+                    width: 280.w,
+                    height: 50.h,
+                    margin: EdgeInsets.symmetric(vertical: 50.h),
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x11000000),
+                          blurRadius: 10,
+                          offset: Offset(0, 5),
+                        ),
+                      ],
+                      color: Colors.white,
+                    ),
+                    child: const Text("予算を指定"),
+                  )
+                ],
               ),
             ),
           ],

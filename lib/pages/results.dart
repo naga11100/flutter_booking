@@ -66,36 +66,42 @@ class Results extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          elevation: 10,
-                          child: ListView.builder(
-                            shrinkWrap: true,
-                            // Listの長さを先ほど取り出したbooksの長さにする。
-                            itemCount: hotels.length,
-                            // indexにはListのindexが入る。
-                            itemBuilder: (context, index) {
-                              return Row(children: [
-                                //firebase storageから画像を取得
-                                Stack(children: [
-                                  Image.network(
-                                    hotels[index].imageURL,
-                                    width: 140.w,
-                                    height: 100.h,
-                                  ),
-                                  //books[index]でList booksのindex番目の要素が取り出せる。
-                                  Container(
-                                    width: 175.w,
-                                    height: 100.h,
-                                    alignment: Alignment.center,
-                                      child: Text(hotels[index].name),
-                                  ),
-                                ])
-                              ]);
-                            },
-                          )),
+                      SizedBox(
+                        width: 315.w,
+                        child: Card(
+                            clipBehavior: Clip.antiAlias,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            elevation: 10,
+                            child: ListView.builder(
+                              shrinkWrap: true,
+                              // Listの長さを先ほど取り出したbooksの長さにする。
+                              itemCount: hotels.length,
+                              // indexにはListのindexが入る。
+                              itemBuilder: (context, index) {
+                                return Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: [
+                                        SizedBox(
+                                          width: 130.w,
+                                          height: 105.h,
+                                          child: Image.network(
+                                            hotels[index].imageURL,
+                                            fit: BoxFit.fill,
+                                          ),
+                                        ),
+                                        //books[index]でList booksのindex番目の要素が取り出せる。
+                                        Container(
+                                          width: 155.w,
+                                          height: 105.h,
+                                          alignment: Alignment.center,
+                                          child: Text(hotels[index].name),
+                                        ),
+                                    ]);
+                              },
+                            )),
+                      ),
                     ]));
           },
         ),

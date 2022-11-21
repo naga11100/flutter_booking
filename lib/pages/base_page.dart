@@ -42,7 +42,7 @@ class BasePage extends HookWidget {
         items: TabItem.values
             .map(
               (tabItem) => BottomNavigationBarItem(
-            icon: Icon(tabItem.icon),
+            icon: Icon(tabItem.icon,size: 35,),
             label: "",
           ),
         )
